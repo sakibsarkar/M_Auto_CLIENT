@@ -1,0 +1,17 @@
+.brandCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 350px;
+    height: 210px;
+    padding: 20px 15px;
+    box-shadow: 0 2px 16.8px 3.2px #00264214;
+    color: #17242f;
+}
+
+
+.brandImg img {
+    width: 100px;
+}

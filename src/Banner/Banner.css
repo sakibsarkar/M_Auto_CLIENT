@@ -1,0 +1,33 @@
+.bannerCon {
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 0 300px;
+
+}
+
+.shape {
+    width: 500px;
+    height: 500px;
+    background-color: #ff2732;
+    border-radius: 32% 68% 80% 20% / 45% 41% 59% 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.shape img {
+    width: 500px;
+    margin: 0 0 0 160px;
+}
+
+.head h1 {
+    font-size: 68px;
+}
+
+span {
+    color: #ff2732;
+}
