@@ -6,7 +6,7 @@ const Banner = () => {
 
             <div className="head">
 
-                <h1>Navigate Your <span>Drive</span>,<br /> Brand by Brand</h1>
+                <h1 className="m-2">Navigate Your <span>Drive</span>,<br /> Brand by Brand</h1>
                 <p>
                     offering a broad spectrum of top-notch brands to cater to every discerning driver. Whether you're drawn to the sleek elegance of luxury vehicles, the robust performance of sports cars, or the practicality of reliable family cars, our collection encompasses it all.
                 </p>

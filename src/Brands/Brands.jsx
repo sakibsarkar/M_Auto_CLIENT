@@ -13,14 +13,13 @@ const Brands = () => {
 
 
     const { car_brands } = loadedData ? loadedData[0] : { car_brands: [] }
-    console.log(car_brands);
 
 
 
     return (
         <div>
 
-            <div className="brandHead">
+            <div className="bg- brandHead">
                 <h1>Brands We offer</h1>
 
             </div>

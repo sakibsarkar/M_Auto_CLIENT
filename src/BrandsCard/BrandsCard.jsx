@@ -11,7 +11,7 @@ const BrandsCard = ({ brand }) => {
                     <img src={brand.image} alt="" />
                 </div>
 
-                <h1>{brand.name}</h1>
+                <h1 style={{ textTransform: brand?.name == "bmw" ? "uppercase" : "capitalize" }}>{brand.name}</h1>
 
             </div>
         </Link>

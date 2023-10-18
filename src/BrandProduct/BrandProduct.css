@@ -1,0 +1,11 @@
+.main {
+    width: 100vw;
+    padding: 3px 0;
+}
+
+.productCon {
+    display: grid;
+    grid-template-columns: repeat(3, 380px);
+    justify-content: center;
+    gap: 50px;
+}

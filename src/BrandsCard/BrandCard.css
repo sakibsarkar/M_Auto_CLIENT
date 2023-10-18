@@ -11,6 +11,9 @@
     color: #17242f;
 }
 
+.brandCard h1 {
+    text-transform: capitalize;
+}
 
 .brandImg img {
     width: 100px;

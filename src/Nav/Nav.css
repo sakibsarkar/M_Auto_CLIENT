@@ -29,6 +29,16 @@ nav ul {
 
 .active {
     color: red;
+    position: relative;
+}
+
+.active::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1.5px;
+    color: #ed1f29;
+
 }
 
 

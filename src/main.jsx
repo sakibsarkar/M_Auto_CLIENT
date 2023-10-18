@@ -1,4 +1,5 @@
 import "./index.css";
+import BrandProduct from "./BrandProduct/BrandProduct";
 import Home from "./Home/Home";
 import HomeLayout from "./HomeLayout/HomeLayout";
 import React from "react";
@@ -13,6 +14,10 @@ const routes = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>
+      },
+      {
+        path: "/cars/:brand",
+        element: <BrandProduct></BrandProduct>,
       }
     ]
 

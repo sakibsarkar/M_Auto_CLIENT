@@ -3,6 +3,8 @@
     grid-template-columns: repeat(3, 380px);
     gap: 20px;
     justify-content: center;
+    padding: 25px 0;
+    min-height: 500px;
 
 
 }

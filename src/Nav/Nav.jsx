@@ -16,7 +16,7 @@ const Nav = () => {
             </ul>
 
             <div className="dinoSection">
-                <Link to={"/login"}> <button>Log In<BsPlusSquare></BsPlusSquare> </button></Link>
+                <Link to={"/login"}> <button className="bg-red">Log In<BsPlusSquare></BsPlusSquare> </button></Link>
             </div>
         </nav>
     );
