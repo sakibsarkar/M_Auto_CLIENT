@@ -1,0 +1,24 @@
+.socialCon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.socialCon div {
+    width: 47%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #ff2e38;
+    padding: 5px 0;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.socialCon div:hover {
+    background-color: #ff2e38;
+    color: white;
+}

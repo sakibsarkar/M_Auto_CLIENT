@@ -1,7 +1,8 @@
 import "./BrandProduct.css";
 import Product from "../Product/Product";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import { Context } from "../AuthProvider";
 
 const BrandProduct = () => {
     const [item, setItem] = useState([])
@@ -18,11 +19,12 @@ const BrandProduct = () => {
 
 
     }, [brand])
-    console.log(item)
+
+
 
     return (
         <div className="main">
-            <div className="carousel w-full">
+            <div className="carousel w-full min-h-[600px] mt-[79px]">
                 <div id="item1" className="carousel-item w-full">
                     <img src={banners[0]} className="w-full" />
                 </div>

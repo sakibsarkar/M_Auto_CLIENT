@@ -1,5 +1,6 @@
 .main {
     width: 100vw;
+    min-height: 500px;
     padding: 3px 0;
 }
 

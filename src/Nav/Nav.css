@@ -8,6 +8,9 @@ nav {
     align-items: center;
     padding: 16px 300px;
     box-shadow: 0 2px 16.8px 3.2px #00264214;
+    position: fixed;
+    width: 100vw;
+    background-color: white;
 
 }
 
