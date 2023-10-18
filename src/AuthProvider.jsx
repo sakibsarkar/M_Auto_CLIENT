@@ -1,5 +1,5 @@
 import auth from "./Firebase-config";
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { useState } from "react";
 import { useEffect } from "react";
 import { createContext } from "react";
@@ -8,7 +8,8 @@ export const Context = createContext(null)
 const AuthProvider = ({ children }) => {
 
     const [user, setUser] = useState(null);
-    const [wait, setWait] = useState(true)
+    const [wait, setWait] = useState(true);
+    const [toast, SetToast] = useState(null)
 
     const loginWithEmail = (email, pass) => {
         return signInWithEmailAndPassword(auth, email, pass)
@@ -19,15 +20,30 @@ const AuthProvider = ({ children }) => {
         return createUserWithEmailAndPassword(auth, email, pass)
     }
 
+    const logOut = () => {
+        return signOut(auth)
+    }
 
     useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
-            setUser(user)
+        if (wait) {
+            onAuthStateChanged(auth, (USER) => {
+                setUser(USER)
 
-        })
+            })
+            return
+        }
+
+        else {
+            onAuthStateChanged(auth, (USER) => {
+                setUser(USER)
+
+            })
+            return
+        }
     }, [wait])
 
-    const item = { loginWithEmail, createUser, user }
+    console.log(user?.displayName)
+    const item = { loginWithEmail, createUser, logOut, user, setUser, setWait, wait, toast, SetToast }
 
     return (
         <Context.Provider value={item}>

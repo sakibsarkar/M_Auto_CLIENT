@@ -1,15 +1,17 @@
 import SocialAuth from "../SocialAuth/SocialAuth";
 import toast, { Toaster } from "react-hot-toast";
+import { updateProfile } from "firebase/auth";
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Context } from "../AuthProvider";
 
 const SignIn = () => {
-    const { createUser } = useContext(Context)
+    const { createUser, setWait, setToast } = useContext(Context)
+    const navigate = useNavigate()
 
     const handleRegister = (e) => {
         e.preventDefault()
-        const { email, password, name, confirm, picture } = e.target
+        const { email, password, name, confirm, photoURL } = e.target
         const capital = /[A-Z]/;
         const special = /[\W_]/
         if (password.value.length < 6) {
@@ -26,6 +28,21 @@ const SignIn = () => {
         if (password.value !== confirm.value) {
             return toast.error("password didn't matched")
         }
+
+        createUser(email.value, password.value)
+            .then(res => {
+
+                updateProfile(res.user, {
+                    displayName: name.value,
+                    photoURL: photoURL.value
+                })
+                    .then(res => {
+                        setWait(false)
+                        setToast(toast.success("succesfully register"))
+                    })
+                navigate(location?.state ? location.state : "/")
+            })
+            .catch(err => setToast(toast.error(`${err}`)))
 
 
 

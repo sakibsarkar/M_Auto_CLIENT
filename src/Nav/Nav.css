@@ -68,3 +68,30 @@ nav ul {
     cursor: pointer;
     color: #ed1f29;
 }
+
+.user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.user img {
+    width: 30px;
+    height: 30px;
+}
+
+.user button {
+    background: #ff2732;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.user button:hover {
+    background-color: transparent;
+    border: 1px solid #ff2732;
+    color: #ed1f29;
+}

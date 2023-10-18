@@ -1,8 +1,12 @@
 import "./Nav.css";
+import { useContext } from "react";
 import { BsPlusSquare } from "react-icons/bs";
 import { Link, NavLink } from "react-router-dom";
+import { Context } from "../AuthProvider";
 
 const Nav = () => {
+    const { user, logOut } = useContext(Context)
+
     return (
         <nav>
             <div className="img">
@@ -15,9 +19,18 @@ const Nav = () => {
                 <li><NavLink to={'myCart'} className="navLinks">My Cart</NavLink></li>
             </ul>
 
-            <div className="dinoSection">
-                <Link to={"/login"}> <button className="bg-red">Log In<BsPlusSquare></BsPlusSquare> </button></Link>
-            </div>
+            {
+                user ?
+                    <div className="user">
+                        <img src={`${user.photoURL}`} alt="" />
+                        <h2>{user.displayName}</h2>
+                        <button onClick={() => logOut()}>Log out</button>
+                    </div>
+                    :
+                    <div className="dinoSection">
+                        <Link to={"/login"}> <button>Log In<BsPlusSquare></BsPlusSquare> </button></Link>
+                    </div>
+            }
         </nav>
     );
 };
