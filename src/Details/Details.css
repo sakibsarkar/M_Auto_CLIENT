@@ -1,0 +1,75 @@
+.detailBox {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    min-height: 100vh;
+    padding: 100px 0 50px 0;
+}
+
+.bigImg {
+    width: fit-content;
+    padding: 20px 96px;
+    background: #ff6565;
+    border-radius: 17px;
+}
+
+.bigImg img {
+    height: 400px;
+}
+
+
+.detail_content h1 {
+    font-size: 50px;
+
+}
+
+.detail_content p {
+    width: 900px;
+}
+
+.aboutCar {
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aboutCar h1 {
+    font-size: 29px;
+    color: #ff6565;
+    font-weight: 500;
+}
+
+.aboutCar p {
+    color: #ff6c00;
+    font-weight: 500;
+
+}
+
+
+.aboutCar button {
+    background: red;
+    padding: 4px 15px;
+    color: white;
+    border-radius: 3px;
+}
+
+.specification {
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.specification p {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+
+}

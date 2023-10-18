@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const Product = ({ data }) => {
 
     const { name, BrandName, model_Img, year, description, type, price, ratings } = data ? data : {}
+    console.log(BrandName, name);
 
     return (
         <div className="productCard">
@@ -37,8 +38,8 @@ const Product = ({ data }) => {
             </div>
 
             <div className="btns">
-                <Link className="widthFull" to={`/cars/details/${BrandName}/${name}`}><button className="details">Details</button></Link>
-                <Link className="widthFull" to={`/cars/update/${BrandName}/${name}`}><button className="update">Update</button></Link>
+                <Link className="widthFull" to={`/cars/details/${BrandName.toLowerCase()}/${name}`}><button className="details">Details</button></Link>
+                <Link className="widthFull" to={`/cars/update/${BrandName.toLowerCase()}/${name}`}><button className="update">Update</button></Link>
             </div>
 
         </div>

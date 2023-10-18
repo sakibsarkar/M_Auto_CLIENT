@@ -1,5 +1,6 @@
 import auth from "./Firebase-config";
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { data } from "autoprefixer";
+import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { useState } from "react";
 import { useEffect } from "react";
 import { createContext } from "react";
@@ -9,14 +10,20 @@ const AuthProvider = ({ children }) => {
 
     const [user, setUser] = useState(null);
     const [wait, setWait] = useState(true);
+    const [loading, setLoading] = useState(true)
     const [toast, SetToast] = useState(null)
+    const [location, setlocation] = useState("")
+    const [cart, setCart] = useState(null)
+    const [runtime, setRunTime] = useState(false)
 
     const loginWithEmail = (email, pass) => {
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, pass)
     }
 
 
     const createUser = (email, pass) => {
+        setLoading(true)
         return createUserWithEmailAndPassword(auth, email, pass)
     }
 
@@ -24,10 +31,21 @@ const AuthProvider = ({ children }) => {
         return signOut(auth)
     }
 
+    const google = () => {
+        setLoading(true)
+        const provider = new GoogleAuthProvider()
+        return signInWithPopup(auth, provider)
+    }
+
+
+
+
     useEffect(() => {
         if (wait) {
             onAuthStateChanged(auth, (USER) => {
                 setUser(USER)
+                setLoading(false)
+
 
             })
             return
@@ -36,14 +54,26 @@ const AuthProvider = ({ children }) => {
         else {
             onAuthStateChanged(auth, (USER) => {
                 setUser(USER)
+                setLoading(false)
+
 
             })
             return
         }
     }, [wait])
 
-    console.log(user?.displayName)
-    const item = { loginWithEmail, createUser, logOut, user, setUser, setWait, wait, toast, SetToast }
+    useEffect(() => {
+        if (user) {
+            fetch(`http://localhost:5000/getCartItems/${user?.email}`)
+                .then(res => res.json())
+                .then(data => setCart(data))
+            return
+        }
+
+    }, [user])
+
+
+    const item = { loginWithEmail, createUser, logOut, google, user, setUser, setWait, wait, toast, SetToast, location, setRunTime, runtime, setlocation, loading, cart, setCart }
 
     return (
         <Context.Provider value={item}>

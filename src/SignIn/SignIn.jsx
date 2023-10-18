@@ -6,8 +6,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { Context } from "../AuthProvider";
 
 const SignIn = () => {
-    const { createUser, setWait, setToast } = useContext(Context)
+    const { createUser, setWait, setToast, location } = useContext(Context)
     const navigate = useNavigate()
+
 
     const handleRegister = (e) => {
         e.preventDefault()

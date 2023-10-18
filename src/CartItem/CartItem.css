@@ -1,0 +1,40 @@
+.cartBox {
+    width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 16.8px 3.2px #00264214;
+    padding: 22px;
+}
+
+.cartBox img {
+    width: 70px;
+}
+
+.cartBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+}
+
+.cartBtns button {
+    color: white;
+    width: 83px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 0;
+}
+
+.cartBtns .buy {
+    background-color: #00b150;
+
+}
+
+.cartBtns .delete {
+    background-color: #fd3e48;
+}

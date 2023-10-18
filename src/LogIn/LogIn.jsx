@@ -2,17 +2,25 @@ import "./LogIn.css";
 import SocialAuth from "../SocialAuth/SocialAuth";
 import { data } from "autoprefixer";
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Context } from "../AuthProvider";
 
 const LogIn = () => {
-    const { loginWithEmail } = useContext(Context)
+    const { loginWithEmail, setlocation, setToast } = useContext(Context)
+    const LOCATION = useLocation()
+    setlocation(LOCATION)
+    const navigate = useNavigate()
 
     const handleLogin = (e) => {
         e.preventDefault()
         const { email, password } = e.target
         loginWithEmail(email.value, password.value)
-            .then(res => console.log(res))
+            .then(res => {
+                setToast(toast.success("successfuly singedIn"))
+                navigate(LOCATION?.state ? LOCATION.state : "/")
+            }
+
+            )
             .then(data => console.log(data))
     }
 
@@ -36,7 +44,7 @@ const LogIn = () => {
                 <div className="or">
                     <h1>OR</h1>
                 </div>
-                <SocialAuth></SocialAuth>
+                <SocialAuth LOCATION={LOCATION}></SocialAuth>
             </div>
         </div>
     );
