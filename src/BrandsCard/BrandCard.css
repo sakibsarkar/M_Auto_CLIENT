@@ -9,6 +9,11 @@
     padding: 20px 15px;
     box-shadow: 0 2px 16.8px 3.2px #00264214;
     color: #17242f;
+    transition: 0.3s;
+}
+
+.brandCard:hover {
+    box-shadow: 0 2px 16.8px 3.2px #011c304d;
 }
 
 .brandCard h1 {

@@ -29,8 +29,8 @@ const Product = ({ data }) => {
                 </div>
 
                 <div className="intro">
-                    <h1>{BrandName}</h1>
-                    <h3>{name}</h3>
+                    <h1>{BrandName} {name}</h1>
+
                     <p className="about">{description}</p>
                     <p className="type">- Type : {type}</p>
                     <p className="price">- Price : {`${price}`}$</p>

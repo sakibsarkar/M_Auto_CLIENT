@@ -55,6 +55,15 @@
     padding: 4px 15px;
     color: white;
     border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+
+.aboutCar button:hover {
+    background-color: transparent;
+    border: 1px solid rgb(255, 36, 36);
+    color: rgb(255, 0, 0)
 }
 
 .specification {
