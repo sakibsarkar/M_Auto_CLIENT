@@ -16,7 +16,12 @@ const Banner = () => {
 
 
             <div className="shape">
-                <img src="https://i.ibb.co/tCrfddM/hero-1.png" alt="" />
+                <img src="https://i.ibb.co/PjK91tq/bg.png" alt="" />
+            </div>
+
+
+            <div className="mobileBanner">
+                <img src="https://t3.ftcdn.net/jpg/04/60/44/42/360_F_460444211_E7j3njYE705Rk1guKz9LKh58gFgiTybV.jpg" alt=""/>
             </div>
         </div>
     );

@@ -1,18 +1,16 @@
 .bannerCon {
     height: 95vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     gap: 20px;
-    padding: 0 200px;
+    padding: 0 100px;
 
 }
 
 .shape {
     width: 500px;
     height: 500px;
-    background-color: #ff2732;
-    border-radius: 32% 68% 80% 20% / 45% 41% 59% 55%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,3 +33,172 @@
 span {
     color: #ff2732;
 }
+
+.mobileBanner {
+    width: 100vw;
+    display: none;
+    padding: 100px 0 0 0;
+}
+
+.mobileBanner img {
+    width: 100%;
+}
+
+
+
+@media screen and (max-width: 400px) {
+
+    .shape img {
+        margin: 0 0 0 75px;
+        width: 300px;
+    }
+
+    .head {
+        width: 100vw;
+        padding: 0 10px;
+    }
+
+    .head h1 {
+        font-size: 30px;
+    }
+
+    .head p {
+        width: 95%;
+        font-size: 13px;
+    }
+
+    .bannerCon {
+        padding: 0;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .shape {
+        display: none;
+    }
+
+    .mobileBanner {
+        display: inline-block;
+    }
+
+
+}
+
+@media screen and (min-width: 401px) and (max-width: 580px) {
+
+    .shape img {
+        margin: 0 0 0 75px;
+        width: 300px;
+    }
+
+    .head {
+        width: 100vw;
+        padding: 0 10px;
+    }
+
+    .head h1 {
+        font-size: 30px;
+    }
+
+    .head p {
+        width: 95%;
+        font-size: 13px;
+    }
+
+    .bannerCon {
+        padding: 0;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .shape {
+        display: none;
+    }
+
+    .mobileBanner {
+        display: inline-block;
+    }
+
+
+
+}
+
+@media screen and (min-width: 580px) and (max-width: 1050px) {
+
+    .shape img {
+        margin: 0 0 0 75px;
+        width: 300px;
+    }
+
+    .head h1 {
+        font-size: 40px;
+    }
+
+    .head p {
+        width: 550px;
+    }
+
+    .bannerCon {
+        padding: 0;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .shape {
+        display: none;
+    }
+
+    .mobileBanner {
+        display: inline-block;
+    }
+
+
+}
+
+@media screen and (min-width: 1050px) and (max-width: 1300px) {
+
+    .bannerCon {
+        padding: 0 45px;
+    }
+
+    .shape img {
+        margin: 0 0 0 75px;
+        width: 300px;
+    }
+
+    .head h1 {
+        font-size: 40px;
+    }
+
+    .head p {
+        width: 550px;
+    }
+
+
+
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1500px) {
+
+
+    .shape img {
+        margin: 0 0 0 75px;
+    }
+
+    .head h1 {
+        font-size: 50px;
+    }
+
+    .head p {
+        width: 648px;
+    }
+
+}
+
+@media screen and (min-width: 1921px) {}

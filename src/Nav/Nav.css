@@ -96,3 +96,160 @@ nav ul {
     border: 1px solid #ff2732;
     color: #ed1f29;
 }
+
+.menuBar {
+    top: 80px;
+    right: 40px;
+    position: absolute;
+    height: 250px;
+    min-width: 200px;
+    box-shadow: 0 2px 16.8px 3.2px #00264214;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: self-start;
+    flex-direction: column;
+    border-radius: 24px;
+    padding: 38px 13px;
+    display: none;
+
+}
+
+.menuBar img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+
+}
+
+.heroNavLinksCon {
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    flex-direction: column;
+}
+
+
+.heroNavLinksCon .heroNavLinks {
+    font-size: 17px;
+}
+
+.heroNavLinksCon button {
+    background: #ff2732;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin: 15px 0 0 0;
+}
+
+.heroUser {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+}
+
+.menuIcon {
+    display: none;
+    font-size: 30px;
+}
+
+
+@media screen and (max-width: 450px) {
+    nav {
+        padding: 16px 15px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .dinoSection {
+        display: none;
+    }
+
+
+    .img img {
+        width: 145px;
+    }
+
+    .user {
+        display: none;
+    }
+
+
+    .menuBar {
+        display: flex;
+    }
+
+    .menuIcon {
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width: 735px) {
+    nav {
+        padding: 16px 30px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .dinoSection {
+        display: none;
+    }
+
+    .user {
+        display: none;
+    }
+
+
+    .menuBar {
+        display: flex;
+    }
+
+    .menuIcon {
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 735px) and (max-width: 1000px) {
+    nav {
+        padding: 16px 60px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .dinoSection {
+        display: none;
+    }
+
+    .user {
+        display: none;
+    }
+
+
+    .menuBar {
+        display: flex;
+    }
+
+    .menuIcon {
+        display: inline-block;
+    }
+
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1600px) {
+    nav {
+        padding: 16px 100px;
+    }
+
+
+
+}
+
+@media screen and (min-width: 1921px) {}
