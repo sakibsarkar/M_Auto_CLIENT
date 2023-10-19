@@ -17,7 +17,7 @@ const Brands = () => {
 
 
     return (
-        <div>
+        <div className="brandHolder">
 
             <div className="bg- brandHead">
                 <h1>Brands We offer</h1>

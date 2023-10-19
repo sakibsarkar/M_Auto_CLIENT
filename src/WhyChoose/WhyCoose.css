@@ -1,0 +1,102 @@
+.chooseUsCon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.chooseTittle h1 {
+    font-size: 60px;
+    position: relative;
+
+}
+
+.chooseTittle h1::after {
+    content: "";
+    position: absolute;
+    height: 4.5px;
+    width: 61%;
+    background-color: red;
+    bottom: -13px;
+    left: 0;
+}
+
+.ourContent {
+    gap: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #faefef;
+    padding: 40px 0;
+}
+
+
+
+.leftSide {
+
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    flex-direction: column;
+    gap: 27px;
+}
+
+.leftSide h1 {
+    font-size: 51px;
+    color: #ff5f67;
+    font-weight: 500;
+
+}
+
+.leftSide p {
+    font-size: 18px;
+    width: 800px;
+}
+
+.rightSide {
+    display: grid;
+    gap: 26px;
+    grid-template-columns: repeat(2, 380px);
+}
+
+.myCard {
+    width: 380px;
+    height: 280px;
+    box-shadow: 0 2px 16.8px 3.2px #00264214;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    flex-direction: column;
+    gap: 25px;
+    background-color: white;
+    border-radius: 34px;
+}
+
+
+.myIcon {
+    background: #ff2732;
+    padding: 12px;
+    font-size: 54px;
+    color: white;
+    border-radius: 50%;
+}
+
+.cardBottom {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    flex-direction: column;
+
+}
+
+.cardBottom h1 {
+    font-size: 30px;
+}
+
+.cardBottom p {
+    font-size: 15px;
+}
