@@ -39,3 +39,39 @@
     bottom: -13px;
     left: 0;
 }
+
+
+
+@media screen and (max-width: 400px) {
+    .brandCon {
+        grid-template-columns: repeat(1, 380px);
+    }
+
+    .brandHead h1 {
+        font-size: 30px;
+    }
+
+}
+
+@media screen and (min-width: 401px) and (max-width: 720px) {}
+
+@media screen and (min-width: 721px) and (max-width: 1280px) {}
+
+@media screen and (min-width: 400px) and (max-width: 815px) {
+    .brandCon {
+        grid-template-columns: repeat(1, 380px);
+    }
+
+    .brandHead h1 {
+        font-size: 50px;
+    }
+
+}
+
+@media screen and (min-width: 815px) and (max-width: 1210px) {
+    .brandCon {
+        grid-template-columns: repeat(2, 380px);
+    }
+}
+
+@media screen and (min-width: 1921px) {}

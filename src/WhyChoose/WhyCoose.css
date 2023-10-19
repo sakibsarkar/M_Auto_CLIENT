@@ -100,3 +100,85 @@
 .cardBottom p {
     font-size: 15px;
 }
+
+
+
+
+
+@media screen and (max-width: 400px) {
+    .ourContent {
+        flex-direction: column-reverse;
+    }
+
+    .leftSide {
+        display: none;
+    }
+
+    .ourContent {
+        flex-direction: column-reverse;
+    }
+
+    .rightSide {
+        grid-template-columns: repeat(1, 380px);
+    }
+
+    .chooseTittle h1 {
+        font-size: 45px;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 840px) {
+    .ourContent {
+        flex-direction: column-reverse;
+    }
+
+    .leftSide {
+        display: none;
+    }
+
+    .ourContent {
+        flex-direction: column-reverse;
+    }
+
+    .rightSide {
+        grid-template-columns: repeat(1, 380px);
+    }
+
+    .chooseTittle h1 {
+        font-size: 45px;
+    }
+}
+
+@media screen and (min-width: 840px) and (max-width: 1500px) {
+
+    .ourContent {
+        flex-direction: column-reverse;
+    }
+
+    .rightSide {
+        grid-template-columns: repeat(1, 380px);
+    }
+
+
+}
+
+@media screen and (min-width: 1500px) and (max-width: 1690px) {
+
+    .myCard {
+        width: 280px;
+    }
+
+    .rightSide {
+        grid-template-columns: repeat(2, 280px);
+    }
+
+    .cardBottom h1 {
+        font-size: 26px;
+    }
+
+    .cardBottom p {
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 1921px) {}
