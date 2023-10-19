@@ -24,7 +24,8 @@ const Brands = () => {
 
             </div>
 
-            <div className="brandCon">
+            <div className="brandCon" data-aos="fade-up"
+                data-aos-duration="2000" data-aos-mirror="true">
 
 
                 {car_brands.map((brand, index) => <BrandsCard key={index} brand={brand}></BrandsCard>)}

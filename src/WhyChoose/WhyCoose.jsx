@@ -6,7 +6,7 @@ import { GiCarKey, GiTakeMyMoney } from "react-icons/gi";
 const WhyCoose = () => {
     return (
         <div className="chooseUsCon">
-            <div className="chooseTittle">
+            <div>
                 <h1>Why Choose Us</h1>
                 {/* <p>we redefine the car-buying experience with an exceptional blend of variety, quality, and transparency. Our curated selection ensures you find the perfect car, backed by rigorous quality checks and fair pricing</p> */}
             </div>
