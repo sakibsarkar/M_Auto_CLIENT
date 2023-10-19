@@ -2,6 +2,7 @@ import "./LogIn.css";
 import SocialAuth from "../SocialAuth/SocialAuth";
 import { data } from "autoprefixer";
 import { useContext } from "react";
+import { Toaster } from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Context } from "../AuthProvider";
 
@@ -46,6 +47,7 @@ const LogIn = () => {
                 </div>
                 <SocialAuth LOCATION={LOCATION}></SocialAuth>
             </div>
+            <Toaster></Toaster>
         </div>
     );
 };

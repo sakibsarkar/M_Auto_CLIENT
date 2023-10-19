@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { Context } from "../AuthProvider";
 
 const SocialAuth = () => {
-    const { google, setToast, location } = useContext(Context)
+    const { google, SetToast, gitHub, location } = useContext(Context)
 
 
     const navigate = useNavigate()
@@ -15,7 +15,7 @@ const SocialAuth = () => {
         media()
             .then(res => {
 
-                const userCart = { email: res.user.email, cartItem: [] }
+                const userCart = { email: res.user.email ? res.user.email : res.user.uid, cartItem: [] }
 
                 fetch(`http://localhost:5000/create/cart/${res.user.email}`, {
                     method: "POST",
@@ -27,18 +27,17 @@ const SocialAuth = () => {
                     .then(res => console.log(res))
                     .catch(err => console.log(err))
                 navigate(location?.state ? location.state : "/")
-                setToast(toast.success("succesfully loged in"))
+                SetToast(toast.success("succesfully loged in"))
 
             })
             .catch(err => {
                 toast.error(`${err}`)
-
             })
     }
     return (
         <div className="socialCon">
 
-            <div>
+            <div onClick={() => mediaLog(gitHub)}>
                 <FiGithub></FiGithub>
                 Github
             </div>

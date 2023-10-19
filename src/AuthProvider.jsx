@@ -1,6 +1,6 @@
 import auth from "./Firebase-config";
 import { data } from "autoprefixer";
-import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { useState } from "react";
 import { useEffect } from "react";
 import { createContext } from "react";
@@ -34,6 +34,12 @@ const AuthProvider = ({ children }) => {
     const google = () => {
         setLoading(true)
         const provider = new GoogleAuthProvider()
+        return signInWithPopup(auth, provider)
+    }
+
+    const gitHub = () => {
+        setLoading(true)
+        const provider = new GithubAuthProvider()
         return signInWithPopup(auth, provider)
     }
 
@@ -72,8 +78,10 @@ const AuthProvider = ({ children }) => {
 
     }, [user])
 
+    console.log(user)
 
-    const item = { loginWithEmail, createUser, logOut, google, user, setUser, setWait, wait, toast, SetToast, location, setRunTime, runtime, setlocation, loading, cart, setCart }
+
+    const item = { loginWithEmail, createUser, logOut, google, gitHub, user, setUser, setWait, wait, toast, SetToast, location, setRunTime, runtime, setlocation, loading, cart, setCart }
 
     return (
         <Context.Provider value={item}>

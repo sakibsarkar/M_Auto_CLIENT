@@ -1,8 +1,9 @@
 .cartBox {
     width: 900px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
     align-items: center;
     box-shadow: 0 2px 16.8px 3.2px #00264214;
     padding: 22px;
@@ -38,3 +39,14 @@
 .cartBtns .delete {
     background-color: #fd3e48;
 }
+
+.valueBox {
+
+    background: #d9d9d9;
+    width: 37px;
+    border: 1px solid;
+    border-radius: 2px;
+    width: 39px;
+    padding: 0 5px;
+}
+

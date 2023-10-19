@@ -1,9 +1,39 @@
 import "./CartItem.css";
+import toast, { Toaster } from "react-hot-toast";
+import { useContext } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { BsFillTrashFill } from "react-icons/bs";
+import { Context } from "../AuthProvider";
 
 const CartItem = ({ value }) => {
-    console.log(value)
+    const { cart, setCart, user, SetToast } = useContext(Context)
+    const { cartItem } = cart
+    const handleDelete = () => {
+
+
+        const cartX = [...cartItem]
+        const newCart = cartX.filter(data => data.name !== value.name)
+
+        const objCart = { cartItem: newCart }
+
+
+        const id = user?.email ? user.email : user.uid
+
+
+        fetch(`http://localhost:5000/delete/cart/${id}`, {
+            method: "PUT",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(newCart)
+
+        }).then(res => {
+            setCart(objCart)
+            SetToast(toast.success(`${value.name} Removed from the cart`))
+        })
+            .catch(err => console.log(err))
+
+    }
     return (
         <div className="cartBox">
 
@@ -13,13 +43,15 @@ const CartItem = ({ value }) => {
             <p>{value.BrandName} {value.name}</p>
             <p>{value.price}</p>
 
+            <input type="number" className="valueBox" defaultValue={"1"} max={"10"} min={"1"} />
+
 
             <div className="cartBtns">
                 <button className="buy"><AiOutlineShoppingCart /> Buy</button>
-                <button className="delete"><BsFillTrashFill />Delete</button>
+                <button className="delete" onClick={handleDelete}><BsFillTrashFill />Delete</button>
             </div>
 
-
+            <Toaster></Toaster>
         </div>
     );
 };

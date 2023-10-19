@@ -16,3 +16,8 @@
     gap: 20px;
 
 }
+
+.tableHead {
+    color: white;
+    background: #ff5f5f;
+}

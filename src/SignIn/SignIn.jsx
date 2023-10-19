@@ -33,6 +33,18 @@ const SignIn = () => {
         createUser(email.value, password.value)
             .then(res => {
 
+                const userCart = { email: res.user.email, cartItem: [] }
+
+                fetch(`http://localhost:5000/create/cart/${res.user.email}`, {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json"
+                    },
+                    body: JSON.stringify(userCart)
+                })
+                    .then(res => console.log(res))
+                    .catch(err => console.log(err))
+
                 updateProfile(res.user, {
                     displayName: name.value,
                     photoURL: photoURL.value
