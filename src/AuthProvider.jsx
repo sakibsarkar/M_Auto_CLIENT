@@ -78,7 +78,6 @@ const AuthProvider = ({ children }) => {
 
     }, [user])
 
-    console.log(user)
 
 
     const item = { loginWithEmail, createUser, logOut, google, gitHub, user, setUser, setWait, wait, toast, SetToast, location, setRunTime, runtime, setlocation, loading, cart, setCart }

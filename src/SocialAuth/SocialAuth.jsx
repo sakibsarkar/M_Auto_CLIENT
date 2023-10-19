@@ -15,9 +15,11 @@ const SocialAuth = () => {
         media()
             .then(res => {
 
+
+                const id = res.user.email ? res.user.email : res.user.uid
                 const userCart = { email: res.user.email ? res.user.email : res.user.uid, cartItem: [] }
 
-                fetch(`http://localhost:5000/create/cart/${res.user.email}`, {
+                fetch(`http://localhost:5000/create/cart/${id}`, {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"

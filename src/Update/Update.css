@@ -1,0 +1,79 @@
+.updateFormCon {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0;
+    gap: 50px;
+}
+
+
+.formHeading {
+    font-size: 40px;
+    font-weight: 500;
+    position: relative;
+}
+
+
+.formHeading::after {
+    position: absolute;
+    content: "";
+    height: 1.5px;
+    width: 100%;
+    background-color: #ff2732;
+}
+
+.updateFormCon form {
+    width: 600px;
+    box-shadow: 0 2px 16.8px 3.2px #00264214;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    padding: 25px 50px;
+    border-radius: 10px;
+
+}
+
+.updateFormCon form .longValue {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.updateFormCon form input {
+    outline: none;
+    width: 100%;
+    background: #f7f7f7;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.updateFormCon form div p {
+    font-size: 20px;
+    color: #7d7d7d
+}
+
+.updateFormCon form button {
+    width: 100%;
+    font-size: 16px;
+    background-color: #ff2732;
+    padding: 10px 0;
+    color: white;
+    border-radius: 5px;
+}
+
+.smallValue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.smallValue div {
+    width: 30%;
+}

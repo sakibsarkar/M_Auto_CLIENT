@@ -2,11 +2,10 @@ import "./Product.css";
 import { BsFillStarFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-const Product = ({ data }) => {
+const Product = ({ data, name }) => {
 
-    const { name, BrandName, model_Img, year, description, type, price, ratings } = data ? data : {}
-    console.log(BrandName, name);
 
+    const { ModelName, model_Img, year, description, type, price, ratings } = data ? data : {}
     return (
         <div className="productCard">
             <div className="productImg">
@@ -29,7 +28,7 @@ const Product = ({ data }) => {
                 </div>
 
                 <div className="intro">
-                    <h1>{BrandName} {name}</h1>
+                    <h1>{name} {ModelName}</h1>
 
                     <p className="about">{description}</p>
                     <p className="type">- Type : {type}</p>
@@ -38,11 +37,13 @@ const Product = ({ data }) => {
             </div>
 
             <div className="btns">
-                <Link className="widthFull" to={`/cars/details/${BrandName.toLowerCase()}/${name}`}><button className="details">Details</button></Link>
-                <Link className="widthFull" to={`/cars/update/${BrandName.toLowerCase()}/${name}`}><button className="update">Update</button></Link>
+                <Link className="widthFull" to={`/cars/details/${name}/${ModelName}`}><button className="details">Details</button></Link>
+                <Link className="widthFull" to={`/cars/update/${name}/${ModelName}`}><button className="update">Update</button></Link>
             </div>
 
         </div>
+
+
     );
 };
 

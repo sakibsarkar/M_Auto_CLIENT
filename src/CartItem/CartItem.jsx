@@ -7,12 +7,14 @@ import { Context } from "../AuthProvider";
 
 const CartItem = ({ value }) => {
     const { cart, setCart, user, SetToast } = useContext(Context)
+    console.log(value)
     const { cartItem } = cart
+    console.log(cart);
     const handleDelete = () => {
 
 
         const cartX = [...cartItem]
-        const newCart = cartX.filter(data => data.name !== value.name)
+        const newCart = cartX.filter(data => data.ModelName !== value.ModelName)
 
         const objCart = { cartItem: newCart }
 

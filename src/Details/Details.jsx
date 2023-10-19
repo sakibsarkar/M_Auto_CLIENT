@@ -6,65 +6,62 @@ import { GiCarKey } from "react-icons/gi";
 import { GiMechanicGarage } from "react-icons/gi";
 import { PiEngineBold } from "react-icons/pi";
 import { SiTurbo } from "react-icons/si";
-import { json, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Context } from "../AuthProvider";
 
 const Details = () => {
-    const { user, runtime, SetToast, cart, setRunTime } = useContext(Context)
-    const { brand, model } = useParams()
-    const [car, setCart] = useState({})
-    console.log(model);
-
+    const [car, setcar] = useState({})
+    const { model, brand } = useParams()
+    const { setCart, cart, user } = useContext(Context)
+    console.log(user.uid)
     useEffect(() => {
+        fetch(`http://localhost:5000/brands/${brand}`)
+            .then(res => res.json())
+            .then(data => setcar(data))
+    }, [brand])
 
-        fetch(`http://localhost:5000/brands/${brand}/${model}`)
+
+    // getting old carts 
+    const id = user.email ? user.email : user.uid
+    useEffect(() => {
+        fetch(`http://localhost:5000/getCartItems/${id}`)
             .then(res => res.json())
             .then(data => setCart(data))
-
-    }, [brand, model])
-
-
-    useEffect(() => {
-
-        fetch(`http://localhost:5000/getCartItems/${user?.email ? user?.email : user.uid}`)
-            .then(res => res.json())
-            .then(data => setCart(data))
-
-    }, [user?.email, user?.uid])
+    }, [id, setCart])
 
 
+
+
+
+    const { models } = car ? car : { models: [] }
+    const result = models?.find(res => res.ModelName == model)
     const handleAddToCart = () => {
-        const { cartItem } = cart ? cart : { cartItem: [] }
-        const newCartValue = [car, ...cartItem]
-        let result = newCartValue.filter((obj, index, array) =>
-            array.findIndex((data) => data.name === obj.name) === index
-        );
-        console.log(user?.email)
-        const userId = user?.email ? user.email : user.uid
-        fetch(`http://localhost:5000/addItem/${userId}`, {
+
+        const { cartItem } = cart
+        const newItem = [result, ...cartItem]
+        fetch(`http://localhost:5000/addItem/${id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"
             },
-            body: JSON.stringify(result)
+            body: JSON.stringify(newItem)
+        }).then(res => toast.success("successfuly added on card"))
 
-        })
-            .then(res => SetToast(toast.success("succesfuly added to cart")))
+
+
 
     }
-
     return (
-
         <div className="detailBox">
 
             <div className="bigImg">
-                <img src={car.model_Img} alt="" />
+                <img src={result?.model_Img} alt="" />
             </div>
 
             <div className="aboutCar">
                 <div>
-                    <h1>{car.BrandName} {car.name}</h1>
-                    <p>$ {car.price}</p>
+                    <h1>{brand} {result?.ModelName}</h1>
+                    <p>$ {result?.price}</p>
                 </div>
 
 
@@ -77,15 +74,15 @@ const Details = () => {
 
             <div className="detail_content">
                 <h1>Description</h1>
-                <p>{car.description}</p>
+                <p>{result?.description}</p>
             </div>
 
             <div className="specification">
-                <p><GiMechanicGarage className="text-[#ff2732]" />Manufacture: {car.year}</p>
-                <p><PiEngineBold className="text-[#ff2732]" />Engine : {car.engine}</p>
-                <p><BsFuelPumpFill className="text-[#ff2732]" /> Fuel : {car.fuel}</p>
-                <p><SiTurbo className="text-[#ff2732]" />Horsepower : {car.horsepower}</p>
-                <p><GiCarKey className="text-[#ff2732]" />Type : {car.type}</p>
+                <p><GiMechanicGarage className="text-[#ff2732]" />Manufacture: {result?.year}</p>
+                <p><PiEngineBold className="text-[#ff2732]" />Engine : {result?.engine ? result.engine : ""}</p>
+                <p><BsFuelPumpFill className="text-[#ff2732]" /> Fuel : {result?.fuel ? result.fuel : ""}</p>
+                <p><SiTurbo className="text-[#ff2732]" />Horsepower : {result?.horsepower ? result.horsepower : ""}</p>
+                <p><GiCarKey className="text-[#ff2732]" />Type : {result?.type ? result.type : ""}</p>
 
             </div>
 

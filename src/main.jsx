@@ -1,4 +1,5 @@
 import "./index.css";
+import AddProduct from "./AddProduct/AddProduct";
 import AuthProvider from "./AuthProvider";
 import BrandProduct from "./BrandProduct/BrandProduct";
 import Details from "./Details/Details";
@@ -10,6 +11,7 @@ import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import SignIn from "./SignIn/SignIn";
+import Update from "./Update/Update";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 const routes = createBrowserRouter([
@@ -40,6 +42,14 @@ const routes = createBrowserRouter([
       {
         path: "/mycart",
         element: <PrivateRoute><MyCart></MyCart></PrivateRoute>
+      },
+      {
+        path: "/cars/update/:brandName/:model",
+        element: <PrivateRoute><Update></Update></PrivateRoute>
+      },
+      {
+        path: "/addproduct",
+        element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
       }
     ]
 
