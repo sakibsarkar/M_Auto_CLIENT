@@ -8,6 +8,8 @@
     height: 550px;
     padding: 25px 15px;
     box-shadow: 0 2px 16.8px 3.2px #00264214;
+    background: white;
+    border-radius: 10px;
 }
 
 .productImg {

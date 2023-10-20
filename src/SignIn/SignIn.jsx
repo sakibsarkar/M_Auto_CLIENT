@@ -35,7 +35,7 @@ const SignIn = () => {
 
                 const userCart = { email: res.user.email, cartItem: [] }
 
-                fetch(`https://assignment-10-server-seven-omega.vercel.app/create/cart/${res.user.email}`, {
+                fetch(`https://assignment-10-server-c2w58adsr-sakibs-projects-d783f29e.vercel.app/create/cart/${res.user.email}`, {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"

@@ -1,109 +1,72 @@
 .footerCon {
-    width: 100vw;
-    padding: 50px;
-    box-shadow: 0 2px 16.8px 3.2px #00264214;
-    background: #bfbfbf;
+    padding: 56px 30px;
+    background: #2a2b2e;
 }
+
 
 footer {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-
-.footerLogo {
-    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-}
-
-
-.footerLogo img {
-    width: 150px;
-}
-
-
-.heroInput {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    border: 1px solid #cd0404;
-}
-
-
-.heroInput input {
-    background: none;
-    padding: 4px 5px;
-    outline: none;
-}
-
-.heroInput .paperPlane {
-    background: #cd0404;
+    padding: 56px 0px;
+    gap: 30px;
     color: white;
-    padding: 8px;
-    font-size: 17px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
 }
 
-
-.contactList h1 {
-    font-size: 35px;
-    font-weight: 500;
-}
-
-
-.footerIcon {
+.footericons {
     display: flex;
     justify-content: center;
     align-items: center;
-    align-items: center;
-    gap: 33px;
+    gap: 24px;
+
 }
 
-.socialIcon {
-    background: red;
-    padding: 20px;
+.footericons div {
+    font-size: 19px;
+    background: white;
+    color: black;
+    padding: 13px;
     border-radius: 50%;
-    color: white;
     cursor: pointer;
-    border: 1px dashed transparent;
-    transition: 0.3s;
 }
 
-.socialIcon:hover {
-    border: 1px dashed red;
-    background-color: transparent;
-    color: red;
+.footerLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    font-size: 20px;
 }
 
 
-@media screen and (max-width: 500px) {
-    footer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+@media screen and (max-width: 436px) {
+    .footerCon {
+        padding: 56px 0;
+    }
+
+    .footericons {
+        gap: 12px;
+    }
+
+    .footerLinks {
+        gap: 20px;
         flex-wrap: wrap;
-        gap: 50px;
-
     }
 
-    .heroInput {
-        display: none;
-    }
 }
 
-@media screen and (min-width: 500px) and (max-width: 1111px) {
-    footer {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 50px;
-
+@media screen and (min-width: 436px) and (max-width: 600px) {
+    .footerCon {
+        padding: 56px 0;
     }
+
+    .footerLinks {
+        gap: 20px;
+    }
+
 }
 
 @media screen and (min-width: 1921px) {}

@@ -1,45 +1,34 @@
 import "./Footer..css";
+import { AiFillYoutube, AiOutlineGooglePlus } from "react-icons/ai";
 import { BiPaperPlane } from "react-icons/bi";
 import { BsTwitter } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
         <div className="footerCon">
 
             <footer>
-                <div className="footerLogo">
-                    <img src="https://i.ibb.co/BwKbzpk/logo.png" />
-                    <div className="heroInput">
-                        <input type="text" placeholder="Your Eamil" />
+                <div className="footericons">
+                    <div><BsTwitter></BsTwitter></div>
+                    <div><FaFacebookF></FaFacebookF></div>
+                    <div><FaLinkedinIn></FaLinkedinIn></div >
+                    <div><AiFillYoutube></AiFillYoutube></div >
+                    <div><AiFillYoutube></AiFillYoutube></div >
+                    <div><AiOutlineGooglePlus></AiOutlineGooglePlus></div >
+                </div >
 
-                        <div className="paperPlane" >
-
-                            <BiPaperPlane />
-                        </div>
-                    </div>
+                <div className="footerLinks">
+                    <Link to={"/"}>Home</Link>
+                    <Link to={"/"}>Add products</Link>
+                    <Link to={"/"}>Cart</Link>
+                    <Link to={"/"}>Blogs</Link>
+                    <Link to={"/"}>Account</Link>
                 </div>
-
-                <div className="contactList">
-                    <h1>Contact With Us</h1>
-                    <div>
-                        <p>Uttara, sectore-11</p>
-                        <p>support@mauto.com</p>
-                        <p>+880 0123456789</p>
-                    </div>
-                </div>
-
-
-                <div className="footerIcon">
-
-                    <div className="socialIcon"><FaFacebookF></FaFacebookF></div>
-                    <div className="socialIcon"><FaLinkedinIn></FaLinkedinIn></div>
-                    <div className="socialIcon"><BsTwitter></BsTwitter></div>
-
-                </div>
-            </footer>
-        </div>
+            </footer >
+        </div >
     );
 };
 

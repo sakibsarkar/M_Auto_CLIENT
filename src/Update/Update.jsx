@@ -9,7 +9,7 @@ const Update = () => {
     const [theCar, setTheCar] = useState({})
     const [allModels, setAllModel] = useState([])
     useEffect(() => {
-        fetch(`https://assignment-10-server-seven-omega.vercel.app/brands/${brandName}`)
+        fetch(`https://assignment-10-server-c2w58adsr-sakibs-projects-d783f29e.vercel.app/brands/${brandName}`)
             .then(res => res.json())
             .then(data => setTheCar(data))
     }, [brandName])
@@ -43,7 +43,7 @@ const Update = () => {
 
 
 
-        fetch(`https://assignment-10-server-seven-omega.vercel.app/brands/${brandName}`, {
+        fetch(`https://assignment-10-server-c2w58adsr-sakibs-projects-d783f29e.vercel.app/brands/${brandName}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"
@@ -52,7 +52,7 @@ const Update = () => {
         })
             .catch(res => console.log(res))
             .then(res => {
-                fetch(`https://assignment-10-server-seven-omega.vercel.app/brandName/${brandName}`, {
+                fetch(`https://assignment-10-server-c2w58adsr-sakibs-projects-d783f29e.vercel.app/brandName/${brandName}`, {
                     method: "PUT",
                     headers: {
                         "content-type": "application/json"
