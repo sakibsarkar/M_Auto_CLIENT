@@ -1,0 +1,130 @@
+.contactParent {
+    padding: 100px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 50px;
+    align-items: center;
+}
+
+.contactForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+
+}
+
+
+.contact {
+    text-align: center;
+    color: rgb(5, 20, 56);
+    position: relative;
+    font-size: 60px;
+    width: -moz-fit-content;
+
+    text-align: center;
+}
+
+.contactLeft {
+    width: 360px;
+    padding: 25px 30px;
+    box-shadow: 0 2px 16.8px 3.2px #00264214;
+    cursor: pointer;
+
+
+}
+
+
+.contactLeft>div {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: self-start;
+    flex-direction: column;
+}
+
+
+.heroCardContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 360px);
+    gap: 20px;
+}
+
+
+.contactCard h1 {
+    font-size: 29px;
+    margin: 0 0 9px 0;
+}
+
+.iconDiv {
+    padding: 7px;
+    border: 1px dashed red;
+    border-radius: 50%;
+    width: 50px;
+    color: rgb(0, 0, 0);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+
+.contactLeft:hover .iconDiv {
+    background-color: red;
+    color: white;
+}
+
+.contactForm form {
+    height: 460px;
+    box-shadow: 0 2px 16.8px 3.2px #00264214;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 20px;
+}
+
+.contactForm form input {
+    background-color: #f7f7f7;
+    padding: 10px 5px;
+    width: 100%;
+    outline: none;
+}
+
+.contactForm form div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.contactForm form textarea {
+    resize: none;
+    width: 100%;
+    background-color: #f7f7f7;
+    padding: 10px;
+    height: 200px;
+    outline: none;
+}
+
+.contactForm form button {
+    background: rgb(255, 18, 18);
+    width: 100%;
+    padding: 7px;
+    color: white;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.contactForm form button:hover {
+    background: rgba(255, 0, 0, 0);
+    color: black;
+    border: 1px solid black;
+}

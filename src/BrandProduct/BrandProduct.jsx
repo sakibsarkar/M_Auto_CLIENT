@@ -1,4 +1,5 @@
 import "./BrandProduct.css";
+import NoProduct from "../NoProduct/NoProduct";
 import Product from "../Product/Product";
 import { useContext, useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
@@ -26,29 +27,32 @@ const BrandProduct = () => {
 
 
 
-            <div className="main">
-                <div className="carousel w-full min-h-[600px] mt-[79px]">
-                    <div id="item1" className="carousel-item w-full">
-                        <img src={banner[0]} className="w-full" />
-                    </div>
-                    <div id="item2" className="carousel-item w-full">
-                        <img src={banner[1]} className="w-full" />
-                    </div>
-                    <div id="item3" className="carousel-item w-full">
-                        <img src={banner[2]} className="w-full" />
-                    </div>
-                </div>
-                <div className="flex justify-center w-full py-2 gap-2">
-                    <a href="#item1" className="btn btn-xs">1</a>
-                    <a href="#item2" className="btn btn-xs">2</a>
-                    <a href="#item3" className="btn btn-xs">3</a>
+            {
+                models?.length <= 0 ? <NoProduct></NoProduct> :
+                    <div className="main">
+                        <div className="carousel w-full min-h-[600px] mt-[79px]">
+                            <div id="item1" className="carousel-item w-full">
+                                <img src={banner[0]} className="w-full" />
+                            </div>
+                            <div id="item2" className="carousel-item w-full">
+                                <img src={banner[1]} className="w-full" />
+                            </div>
+                            <div id="item3" className="carousel-item w-full">
+                                <img src={banner[2]} className="w-full" />
+                            </div>
+                        </div>
+                        <div className="flex justify-center w-full py-2 gap-2">
+                            <a href="#item1" className="btn btn-xs">1</a>
+                            <a href="#item2" className="btn btn-xs">2</a>
+                            <a href="#item3" className="btn btn-xs">3</a>
 
-                </div>
+                        </div>
 
-                <div className="productCon">
-                    {models.map((data, index) => <Product key={index} data={data} name={name}></Product>)}
-                </div>
-            </div>
+                        <div className="productCon">
+                            {models.map((data, index) => <Product key={index} data={data} name={name}></Product>)}
+                        </div>
+                    </div>
+            }
 
 
 

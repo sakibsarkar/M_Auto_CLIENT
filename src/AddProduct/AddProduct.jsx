@@ -10,6 +10,7 @@ const AddProduct = () => {
     const [typeValue, setTypeValue] = useState("Select Type")
     const { user } = useContext(Context)
     const [car, setCar] = useState({})//car is, all the data of selected brand (brandValue)
+    window.scroll(0, 0)
     const handleChanged = (e) => {
         e.preventDefault()
         setBrandValue(e.target.value)
@@ -79,8 +80,8 @@ const AddProduct = () => {
                             <option value="ford">ford</option>
                             <option value="bmw">bmw</option>
                             <option value="honda">honda</option>
-                            <option value="honda">mercedes</option>
-                            <option value="honda">chevrolet</option>
+                            <option value="mercedes">mercedes</option>
+                            <option value="chevrolet">chevrolet</option>
                         </select>
                     </div>
                     <input type="text" name="model" placeholder="Name (model of the car)" required />

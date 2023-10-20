@@ -1,0 +1,80 @@
+.footerCon {
+    width: 100vw;
+    padding: 50px;
+    box-shadow: 0 2px 16.8px 3.2px #00264214;
+    background: #bfbfbf;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.footerLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.footerLogo img {
+    width: 150px;
+}
+
+
+.heroInput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 1px solid #cd0404;
+}
+
+
+.heroInput input {
+    background: none;
+    padding: 4px 5px;
+    outline: none;
+}
+
+.heroInput .paperPlane {
+    background: #cd0404;
+    color: white;
+    padding: 8px;
+    font-size: 17px;
+}
+
+
+.contactList h1 {
+    font-size: 35px;
+    font-weight: 500;
+}
+
+
+.footerIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    gap: 33px;
+}
+
+.socialIcon {
+    background: red;
+    padding: 20px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    border: 1px dashed transparent;
+    transition: 0.3s;
+}
+
+.socialIcon:hover {
+    border: 1px dashed red;
+    background-color: transparent;
+    color: red;
+}

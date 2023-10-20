@@ -6,6 +6,8 @@ const Product = ({ data, name }) => {
 
 
     const { ModelName, model_Img, year, description, type, price, ratings } = data ? data : {}
+
+    window.scroll(0, 0)
     return (
         <div className="productCard">
             <div className="productImg">

@@ -1,3 +1,4 @@
+import Footer from "../Footer/Footer";
 import Nav from "../Nav/Nav";
 import { useContext } from "react";
 import { Toaster } from "react-hot-toast";
@@ -14,6 +15,7 @@ const HomeLayout = () => {
         <>
             <Nav></Nav>
             <Outlet></Outlet>
+            <Footer></Footer>
             <Toaster></Toaster>
         </>
     );
