@@ -1,0 +1,30 @@
+.errorCon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.errorCon h1 {
+    font-size: 42px;
+    color: #70e3f1;
+}
+
+.errorCon p {
+    font-size: 20px;
+    color: #357676;
+}
+
+.goBack {
+    color: white;
+    background: #00daff;
+    padding: 2px 18px;
+    border-radius: 2px;
+}
+
+@media screen and (max-width: 470px) {
+    .errorCon h1 {
+        font-size: 30px;
+    }
+}

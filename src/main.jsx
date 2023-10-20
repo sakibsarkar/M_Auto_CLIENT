@@ -3,6 +3,7 @@ import AddProduct from "./AddProduct/AddProduct";
 import AuthProvider from "./AuthProvider";
 import BrandProduct from "./BrandProduct/BrandProduct";
 import Details from "./Details/Details";
+import ErrorPage from "./ErrorPage/ErrorPage";
 import Home from "./Home/Home";
 import HomeLayout from "./HomeLayout/HomeLayout";
 import LogIn from "./LogIn/LogIn.jsx";
@@ -18,6 +19,7 @@ const routes = createBrowserRouter([
   {
     path: "/",
     element: <HomeLayout></HomeLayout>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
