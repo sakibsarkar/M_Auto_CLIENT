@@ -22,7 +22,8 @@ const CartItem = ({ value }) => {
         const id = user?.email ? user.email : user.uid
 
 
-        fetch(`https://assignment-10-server-60dznztq0-sakibs-projects-d783f29e.vercel.app/delete/cart/${id}`, {
+        
+        fetch(`https://assignment-10-server-7tiwld456-sakibs-projects-d783f29e.vercel.app/delete/cart/${id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"

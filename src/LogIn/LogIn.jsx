@@ -1,28 +1,28 @@
 import "./LogIn.css";
 import SocialAuth from "../SocialAuth/SocialAuth";
+import toast, { Toaster } from "react-hot-toast";
 import { data } from "autoprefixer";
 import { useContext } from "react";
-import { Toaster } from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Context } from "../AuthProvider";
 
 const LogIn = () => {
-    const { loginWithEmail, setlocation, setToast } = useContext(Context)
+    const { loginWithEmail, setlocation, SetToast } = useContext(Context)
     const LOCATION = useLocation()
     setlocation(LOCATION)
     const navigate = useNavigate()
 
+
+    console.clear()
     const handleLogin = (e) => {
         e.preventDefault()
         const { email, password } = e.target
         loginWithEmail(email.value, password.value)
             .then(res => {
-                setToast(toast.success("successfuly singedIn"))
                 navigate(LOCATION?.state ? LOCATION.state : "/")
-            }
-
-            )
-            .then(data => console.log(data))
+                SetToast(toast.success("successfuly singedIn"))
+            })
+            .catch(err => toast.error(`invalid email or password`))
     }
 
     return (
@@ -47,7 +47,10 @@ const LogIn = () => {
                 </div>
                 <SocialAuth LOCATION={LOCATION}></SocialAuth>
             </div>
-            <Toaster></Toaster>
+            <Toaster
+                position="top-center"
+                reverseOrder={false}
+            />
         </div>
     );
 };

@@ -23,7 +23,7 @@ const AddProduct = () => {
 
     useEffect(() => {
         if (brandValue !== "Select brand" || typeValue !== "Select Type") {
-            fetch(`https://assignment-10-server-60dznztq0-sakibs-projects-d783f29e.vercel.app/brands/${brandValue}`)
+            fetch(`https://assignment-10-server-7tiwld456-sakibs-projects-d783f29e.vercel.app/brands/${brandValue}`)
                 .then(res => res.json())
                 .then(data => setCar(data))
             return
@@ -42,7 +42,7 @@ const AddProduct = () => {
         const { description, model, image, rating, price, } = e.target
         const id = user?.email ? user.email : user.uid
 
-        fetch(`https://assignment-10-server-60dznztq0-sakibs-projects-d783f29e.vercel.app/brands/${brandValue}`)
+        fetch(`https://assignment-10-server-7tiwld456-sakibs-projects-d783f29e.vercel.app/brands/${brandValue}`)
             .then(res => res.json())
             .then(data => setCar(data))
 
@@ -57,7 +57,7 @@ const AddProduct = () => {
 
         console.log(newItems)
 
-        fetch(`https://assignment-10-server-60dznztq0-sakibs-projects-d783f29e.vercel.app/brands/${brandValue}`, {
+        fetch(`https://assignment-10-server-7tiwld456-sakibs-projects-d783f29e.vercel.app/brands/${brandValue}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"

@@ -9,7 +9,6 @@ import { Context } from "../AuthProvider";
 const Nav = () => {
     const { user, logOut } = useContext(Context)
     const [click, setClick] = useState(false)
-    console.log(user)
 
     return (
         <nav>

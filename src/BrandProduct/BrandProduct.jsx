@@ -9,7 +9,7 @@ const BrandProduct = () => {
     const [item, setItem] = useState(null)
     const { brand } = useParams()
     useEffect(() => {
-        fetch(`https://assignment-10-server-60dznztq0-sakibs-projects-d783f29e.vercel.app/brands/${brand}`)
+        fetch(`https://assignment-10-server-7tiwld456-sakibs-projects-d783f29e.vercel.app/brands/${brand}`)
             .then(res => res.json())
             .then(data => setItem(data))
     }, [brand])
@@ -30,7 +30,7 @@ const BrandProduct = () => {
             {
                 models?.length <= 0 ? <NoProduct></NoProduct> :
                     <div className="main">
-                        <div className="carousel w-full min-h-[600px] mt-[79px]">
+                        <div className="carousel w-full mt-[100px]">
                             <div id="item1" className="carousel-item w-full">
                                 <img src={banner[0]} className="w-full" />
                             </div>
@@ -49,7 +49,7 @@ const BrandProduct = () => {
                         </div>
 
                         <div className="productCon">
-                            {models.map((data, index) => <Product key={index} data={data} name={name}></Product>)}
+                            {models?.map((data, index) => <Product key={index} data={data} name={name}></Product>)}
                         </div>
                     </div>
             }
