@@ -8,7 +8,7 @@ const Update = () => {
     const [theCar, setTheCar] = useState({})
     const [allModels, setAllModel] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/brands/${brandName}`)
+        fetch(`https://assignment-10-server-60dznztq0-sakibs-projects-d783f29e.vercel.app/brands/${brandName}`)
             .then(res => res.json())
             .then(data => setTheCar(data))
     }, [brandName])
@@ -42,7 +42,7 @@ const Update = () => {
 
 
 
-        fetch(`http://localhost:5000/brands/${brandName}`, {
+        fetch(`https://assignment-10-server-60dznztq0-sakibs-projects-d783f29e.vercel.app/brands/${brandName}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"
@@ -50,7 +50,7 @@ const Update = () => {
             body: JSON.stringify(newModelArr)
         })
             .then(res => {
-                fetch(`http://localhost:5000/brandName/${brandName}`, {
+                fetch(`https://assignment-10-server-60dznztq0-sakibs-projects-d783f29e.vercel.app/brandName/${brandName}`, {
                     method: "PUT",
                     headers: {
                         "content-type": "application/json"

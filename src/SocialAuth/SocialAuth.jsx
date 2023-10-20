@@ -19,7 +19,7 @@ const SocialAuth = () => {
                 const id = res.user.email ? res.user.email : res.user.uid
                 const userCart = { email: res.user.email ? res.user.email : res.user.uid, cartItem: [] }
 
-                fetch(`http://localhost:5000/create/cart/${id}`, {
+                fetch(`https://assignment-10-server-60dznztq0-sakibs-projects-d783f29e.vercel.app/create/cart/${id}`, {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"

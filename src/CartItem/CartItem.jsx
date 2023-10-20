@@ -22,7 +22,7 @@ const CartItem = ({ value }) => {
         const id = user?.email ? user.email : user.uid
 
 
-        fetch(`http://localhost:5000/delete/cart/${id}`, {
+        fetch(`https://assignment-10-server-60dznztq0-sakibs-projects-d783f29e.vercel.app/delete/cart/${id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"
@@ -31,7 +31,7 @@ const CartItem = ({ value }) => {
 
         }).then(res => {
             setCart(objCart)
-            SetToast(toast.success(`${value.name} Removed from the cart`))
+            SetToast(toast.success(`Successfuly Removed from the cart`))
         })
             .catch(err => console.log(err))
 

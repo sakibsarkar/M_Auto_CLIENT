@@ -15,7 +15,7 @@ const Details = () => {
     const { setCart, cart, user } = useContext(Context)
     console.log(user.uid)
     useEffect(() => {
-        fetch(`http://localhost:5000/brands/${brand}`)
+        fetch(`https://assignment-10-server-60dznztq0-sakibs-projects-d783f29e.vercel.app/brands/${brand}`)
             .then(res => res.json())
             .then(data => setcar(data))
     }, [brand])
@@ -24,7 +24,7 @@ const Details = () => {
     // getting old carts 
     const id = user.email ? user.email : user.uid
     useEffect(() => {
-        fetch(`http://localhost:5000/getCartItems/${id}`)
+        fetch(`https://assignment-10-server-60dznztq0-sakibs-projects-d783f29e.vercel.app/getCartItems/${id}`)
             .then(res => res.json())
             .then(data => setCart(data))
     }, [id, setCart])
@@ -39,7 +39,7 @@ const Details = () => {
 
         const { cartItem } = cart
         const newItem = [result, ...cartItem]
-        fetch(`http://localhost:5000/addItem/${id}`, {
+        fetch(`https://assignment-10-server-60dznztq0-sakibs-projects-d783f29e.vercel.app/addItem/${id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"
