@@ -1,4 +1,5 @@
 import "./Update.css";
+import toast, { Toaster } from "react-hot-toast";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -8,7 +9,7 @@ const Update = () => {
     const [theCar, setTheCar] = useState({})
     const [allModels, setAllModel] = useState([])
     useEffect(() => {
-        fetch(`https://assignment-10-server-7tiwld456-sakibs-projects-d783f29e.vercel.app/brands/${brandName}`)
+        fetch(`https://assignment-10-server-seven-omega.vercel.app/brands/${brandName}`)
             .then(res => res.json())
             .then(data => setTheCar(data))
     }, [brandName])
@@ -42,7 +43,7 @@ const Update = () => {
 
 
 
-        fetch(`https://assignment-10-server-7tiwld456-sakibs-projects-d783f29e.vercel.app/brands/${brandName}`, {
+        fetch(`https://assignment-10-server-seven-omega.vercel.app/brands/${brandName}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"
@@ -51,13 +52,15 @@ const Update = () => {
         })
             .catch(res => console.log(res))
             .then(res => {
-                fetch(`https://assignment-10-server-7tiwld456-sakibs-projects-d783f29e.vercel.app/brandName/${brandName}`, {
+                fetch(`https://assignment-10-server-seven-omega.vercel.app/brandName/${brandName}`, {
                     method: "PUT",
                     headers: {
                         "content-type": "application/json"
                     },
                     body: JSON.stringify({ name: BrandName.value })
                 })
+
+                toast.success("succesfully updated")
             })
 
 
@@ -115,6 +118,8 @@ const Update = () => {
                 <button type="submit">Submit</button>
 
             </form>
+
+            <Toaster></Toaster>
 
         </div>
 

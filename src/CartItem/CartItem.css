@@ -50,3 +50,32 @@
     padding: 0 5px;
 }
 
+
+
+
+@media screen and (max-width: 512px) {
+    .cartBox {
+        width: 100vw;
+        padding: 22px 9px;
+    }
+
+    .cartBtns {
+        gap: 9px;
+    }
+}
+
+@media screen and (min-width: 512px) and (max-width: 720px) {
+    .cartBox {
+        width: 95vw;
+    }
+
+    .cartBtns {
+        gap: 15px;
+    }
+}
+
+@media screen and (min-width: 720px) and (max-width: 940px) {
+    .cartBox {
+        width: 700px;
+    }
+}

@@ -87,3 +87,21 @@ form .devider {
     color: rgb(255, 255, 255);
     box-shadow: inset 500px 0 red;
 }
+
+
+@media screen and (max-width: 490px) {
+    .addProductCon form {
+        width: 375px;
+        padding: 9px 9px;
+    }
+
+}
+
+@media screen and (min-width: 490px) and (max-width: 620px) {
+    .addProductCon form {
+        width: 480px;
+        padding: 20px 23px;
+    }
+}
+
+@media screen and (min-width: 1921px) {}

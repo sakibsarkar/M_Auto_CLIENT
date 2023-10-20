@@ -9,7 +9,7 @@ const BrandProduct = () => {
     const [item, setItem] = useState(null)
     const { brand } = useParams()
     useEffect(() => {
-        fetch(`https://assignment-10-server-7tiwld456-sakibs-projects-d783f29e.vercel.app/brands/${brand}`)
+        fetch(`https://assignment-10-server-seven-omega.vercel.app/brands/${brand}`)
             .then(res => res.json())
             .then(data => setItem(data))
     }, [brand])

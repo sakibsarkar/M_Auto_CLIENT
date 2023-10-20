@@ -133,3 +133,36 @@
     color: black;
     border: 1px solid black;
 }
+
+
+
+@media screen and (max-width: 400px) {
+    .contactForm {
+        flex-direction: column-reverse;
+    }
+
+    .contactForm form {
+        width: 95vw;
+
+    }
+
+}
+
+@media screen and (min-width: 410px) and (max-width: 525px) {
+    .contactForm {
+        flex-direction: column-reverse;
+    }
+
+    .contactForm form {
+        width: 406px;
+
+    }
+}
+
+@media screen and (min-width: 525px) and (max-width: 915px) {
+    .contactForm {
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (min-width: 1921px) {}

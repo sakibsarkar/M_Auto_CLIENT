@@ -78,3 +78,32 @@ footer {
     background-color: transparent;
     color: red;
 }
+
+
+@media screen and (max-width: 500px) {
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 50px;
+
+    }
+
+    .heroInput {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1111px) {
+    footer {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 50px;
+
+    }
+}
+
+@media screen and (min-width: 1921px) {}

@@ -9,7 +9,7 @@ const MyCart = () => {
     const id = user?.email ? user.email : user.uid
     useEffect(() => {
 
-        fetch(`https://assignment-10-server-7tiwld456-sakibs-projects-d783f29e.vercel.app/getCartItems/${id}`)
+        fetch(`https://assignment-10-server-seven-omega.vercel.app/getCartItems/${id}`)
             .then(res => res.json())
             .then(data => setCart(data))
 

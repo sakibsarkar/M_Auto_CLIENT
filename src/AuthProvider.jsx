@@ -70,7 +70,7 @@ const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         if (user) {
-            fetch(`https://assignment-10-server-7tiwld456-sakibs-projects-d783f29e.vercel.app/${user?.email}`)
+            fetch(`https://assignment-10-server-seven-omega.vercel.app/${user?.email}`)
                 .then(res => res.json())
                 .then(data => setCart(data))
             return

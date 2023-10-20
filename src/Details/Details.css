@@ -83,3 +83,96 @@
     align-items: center;
 
 }
+
+
+
+    {}
+
+@media screen and (min-width: 401px) and (max-width: 720px) {}
+
+@media screen and (max-width: 400px) {
+
+    .bigImg img {
+        height: 200px;
+        height: auto;
+    }
+
+    .detailBox {
+        width: 90vw;
+        margin: auto;
+    }
+
+    .detail_content {
+        width: 100%
+    }
+
+    .specification {
+        width: 100%;
+    }
+
+    .detail_content p {
+        width: 100%;
+    }
+
+    .aboutCar {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 600px) {
+
+    .bigImg img {
+        height: 200px;
+        height: auto;
+    }
+
+    .detailBox {
+        width: 90vw;
+        margin: auto;
+    }
+
+    .detail_content {
+        width: 100%
+    }
+
+    .specification {
+        width: 100%;
+    }
+
+    .detail_content p {
+        width: 100%;
+    }
+
+    .aboutCar {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 946px) {
+    .bigImg img {
+        height: 200px;
+    }
+
+    .detailBox {
+        width: 80vw;
+        margin: auto;
+    }
+
+    .detail_content {
+        width: 100%
+    }
+
+    .specification {
+        width: 100%;
+    }
+
+    .detail_content p {
+        width: 100%;
+    }
+
+    .aboutCar {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1921px) {}

@@ -22,8 +22,8 @@ const CartItem = ({ value }) => {
         const id = user?.email ? user.email : user.uid
 
 
-        
-        fetch(`https://assignment-10-server-7tiwld456-sakibs-projects-d783f29e.vercel.app/delete/cart/${id}`, {
+
+        fetch(`https://assignment-10-server-seven-omega.vercel.app/delete/cart/${id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"
@@ -43,7 +43,7 @@ const CartItem = ({ value }) => {
             <div>
                 <img src={value.model_Img} alt="" />
             </div>
-            <p>{value.BrandName} {value.name}</p>
+            <p>{value.ModelName}</p>
             <p>{value.price}</p>
 
             <input type="number" className="valueBox" defaultValue={"1"} max={"10"} min={"1"} />
