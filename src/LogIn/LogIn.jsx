@@ -20,7 +20,7 @@ const LogIn = () => {
         loginWithEmail(email.value, password.value)
             .then(res => {
                 navigate(LOCATION?.state ? LOCATION.state : "/")
-                SetToast(toast.success("successfuly singedIn"))
+                SetToast(toast.success("successfuly singed In"))
             })
             .catch(err => toast.error(`invalid email or password`))
     }

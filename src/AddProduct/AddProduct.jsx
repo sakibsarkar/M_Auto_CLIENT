@@ -1,5 +1,5 @@
 import "./AddProduct.css";
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import { data } from "autoprefixer";
 import { useContext, useEffect, useState } from "react";
 import { Context } from "../AuthProvider";
@@ -64,7 +64,7 @@ const AddProduct = () => {
             },
             body: JSON.stringify(newItems)
         })
-
+            .then(res => toast.success("successfully Product Added"))
 
     }
 
@@ -111,6 +111,8 @@ const AddProduct = () => {
                 <button type="submit" className="addProduct">Add Product</button>
 
             </form>
+
+            <Toaster></Toaster>
         </div>
     );
 };
