@@ -8,3 +8,29 @@
 * {
   font-family: 'Roboto', sans-serif;
 }
+
+.modeToggle {
+  position: fixed;
+  z-index: 9999;
+  width: 40px;
+  background: #ffffff;
+  height: 40px;
+  top: 154px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 78px;
+  flex-direction: column;
+  cursor: pointer;
+  color: black;
+  box-shadow: 0 2px 16.8px 3.2px #95959578;
+}
+
+
+@media screen and (max-width: 650px) {
+
+  .modeToggle {
+    display: none;
+  }
+}

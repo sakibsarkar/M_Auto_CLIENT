@@ -1,6 +1,8 @@
 import "./Banner.css";
+import { useState } from "react";
 
 const Banner = () => {
+ 
     return (
         <div className="bannerCon">
 
@@ -15,9 +17,11 @@ const Banner = () => {
             </div>
 
 
+          
+
             <div className="shape" data-aos="fade-up"
                 data-aos-anchor-placement="center-center" data-aos-duration="2000" data-aos-mirror="true">
-                <img src="https://i.ibb.co/PjK91tq/bg.png" alt="" />
+                <img src="https://i.ibb.co/vQJscKs/bg-removebg-preview.png" alt="" />
             </div>
 
 
