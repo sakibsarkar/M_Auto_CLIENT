@@ -73,7 +73,7 @@ const SignIn = () => {
                         <input type="email" name="email" placeholder="Your Email" required />
                         <input type="password" name="password" placeholder="Your Password" required />
                         <input type="password" name="confirm" placeholder="Confirm Password" required />
-                        <button type="submit">Log in</button>
+                        <button type="submit">Sign In</button>
                     </div>
 
                     <div className="toggleAccount">Already have an account? got to <Link className="switch" to={"/login"}>Log in </Link></div>
