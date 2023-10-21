@@ -14,7 +14,6 @@ const Details = () => {
     const { model, brand } = useParams()
 
     const { setCart, cart, user } = useContext(Context)
-    console.log(user.uid)
     useEffect(() => {
         fetch(`https://assignment-10-server-c2w58adsr-sakibs-projects-d783f29e.vercel.app/brands/${brand}`)
             .then(res => res.json())

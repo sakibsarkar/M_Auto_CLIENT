@@ -7,9 +7,9 @@ import { Context } from "../AuthProvider";
 
 const CartItem = ({ value }) => {
     const { cart, setCart, user, SetToast } = useContext(Context)
-    console.log(value)
+
     const { cartItem } = cart
-    console.log(cart);
+
     const handleDelete = () => {
 
 

@@ -15,7 +15,7 @@ const Update = () => {
     }, [brandName])
 
 
-    console.log(allModels)
+
 
 
     // getting the we need update 
@@ -23,7 +23,7 @@ const Update = () => {
 
 
     const result = models?.find(res => res.ModelName == model)
-    console.log(theCar)
+
 
 
 

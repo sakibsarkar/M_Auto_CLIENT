@@ -48,14 +48,14 @@ const AddProduct = () => {
 
         const { models } = car ? car : { models: [] }
         const newProductId = models?.length + 1
-        console.log(newProductId)
+     
 
         const newProductObj = { id: newProductId, ModelName: model.value, model_Img: image.value, year: "UnKnown", horsepower: "Unknown", engine: "Unknown", type: typeValue, fuel: "Unknown", ratings: rating.value, price: price.value, description: description.value }
 
 
         const newItems = [...models, newProductObj]
 
-        console.log(newItems)
+ 
 
         fetch(`https://assignment-10-server-c2w58adsr-sakibs-projects-d783f29e.vercel.app/brands/${brandValue}`, {
             method: "PUT",
