@@ -21,9 +21,16 @@
     color: rgb(5, 20, 56);
     position: relative;
     font-size: 60px;
-    width: -moz-fit-content;
+}
 
-    text-align: center;
+h1.contact::after {
+    content: "";
+    position: absolute;
+    height: 4.5px;
+    width: 61%;
+    background-color: red;
+    bottom: -13px;
+    left: 0;
 }
 
 .contactLeft {

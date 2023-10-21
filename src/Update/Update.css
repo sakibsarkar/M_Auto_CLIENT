@@ -18,9 +18,11 @@
 .formHeading::after {
     position: absolute;
     content: "";
-    height: 1.5px;
-    width: 100%;
+    height: 3.5px;
+    width: 66%;
     background-color: #ff2732;
+    bottom: -11px;
+    left: 69px;
 }
 
 .updateFormCon form {
@@ -77,3 +79,22 @@
 .smallValue div {
     width: 30%;
 }
+
+
+@media screen and (max-width: 490px) {
+    .updateFormCon form {
+        padding: 25px 10px;
+        width: 364px;
+        gap: 21px;
+    }
+}
+
+@media screen and (min-width: 490px) and (max-width: 610px) {
+    .updateFormCon form {
+        padding: 25px;
+        width: 483px;
+    }
+
+}
+
+@media screen and (min-width: 1921px) {}
