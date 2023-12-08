@@ -1,7 +1,6 @@
 import "./LogIn.css";
 import SocialAuth from "../SocialAuth/SocialAuth";
 import toast, { Toaster } from "react-hot-toast";
-import { data } from "autoprefixer";
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Context } from "../AuthProvider";
@@ -9,8 +8,10 @@ import { Context } from "../AuthProvider";
 const LogIn = () => {
     const { loginWithEmail, setlocation, SetToast } = useContext(Context)
     const LOCATION = useLocation()
+    console.log(LOCATION)
     setlocation(LOCATION)
     const navigate = useNavigate()
+    const axios = useAxios()
 
 
     console.clear()
@@ -19,6 +20,12 @@ const LogIn = () => {
         const { email, password } = e.target
         loginWithEmail(email.value, password.value)
             .then(res => {
+                axios.post("/user/token", { email: res?.user?.email })
+                    .then(res => {
+                        toast.dismiss(loadingToast)
+                        setToast(toast.success("successfuly account created"))
+                        navigate(naviGateLocation?.state ? naviGateLocation?.state : "/")
+                    })
                 navigate(LOCATION?.state ? LOCATION.state : "/")
                 SetToast(toast.success("successfuly singed In"))
             })

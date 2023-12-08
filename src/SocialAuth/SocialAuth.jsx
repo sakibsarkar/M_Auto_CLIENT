@@ -11,6 +11,7 @@ const SocialAuth = () => {
 
 
     const navigate = useNavigate()
+    const axios = useaxi
     const mediaLog = (media) => {
         media()
             .then(res => {
