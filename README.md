@@ -1,4 +1,4 @@
-# MAuto 
+# MAuto - Car selling website (MERN)
 ## Live link - [MAuto](https://assignment-10-b5c63.web.app)
 ## Server side repository link - [M_Auto_SERVER](https://github.com/sakibsarkar/M_Auto_SERVER)
 
